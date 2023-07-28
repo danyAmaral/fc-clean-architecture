@@ -1,6 +1,6 @@
 import Product from "../entity/product";
-import ProductInterface from "../entity/product.interface";
 import { v4 as uuid } from "uuid";
+import ProductInterface from "../entity/product.interface";
 import ProductB from "../entity/product-b";
 
 export default class ProductFactory {
@@ -17,5 +17,9 @@ export default class ProductFactory {
       default:
         throw new Error("Product type not supported");
     }
+  }
+
+  public static createProduct(name: string, price: number): Product {
+    return new Product(uuid(), name, price);
   }
 }
