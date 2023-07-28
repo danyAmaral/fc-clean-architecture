@@ -3,7 +3,7 @@ import ProductRepositoryInterface from "../../../domain/product/repository/produ
 import {
   InputCreateProductDto,
   OutputCreateProductDto,
-} from "./create.product.dtp";
+} from "./create.product.dto";
 
 export default class CreateProductUseCase {
   private productRepository: ProductRepositoryInterface;
